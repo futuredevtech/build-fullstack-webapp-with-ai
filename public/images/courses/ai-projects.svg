@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e112a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#091b29"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <filter id="glowAi" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#aiBg)"/>
+  <circle cx="400" cy="210" r="140" fill="#a855f7" opacity="0.12" filter="url(#glowAi)"/>
+
+  <!-- Neural Net Connections -->
+  <g stroke="#a855f7" stroke-width="2" stroke-opacity="0.4">
+    <!-- Layer 1 to Layer 2 -->
+    <line x1="240" y1="140" x2="360" y2="120"/>
+    <line x1="240" y1="140" x2="360" y2="210"/>
+    <line x1="240" y1="210" x2="360" y2="120"/>
+    <line x1="240" y1="210" x2="360" y2="210"/>
+    <line x1="240" y1="210" x2="360" y2="300"/>
+    <line x1="240" y1="280" x2="360" y2="210"/>
+    <line x1="240" y1="280" x2="360" y2="300"/>
+
+    <!-- Layer 2 to Layer 3 -->
+    <line x1="360" y1="120" x2="480" y2="150"/>
+    <line x1="360" y1="120" x2="480" y2="270"/>
+    <line x1="360" y1="210" x2="480" y2="150"/>
+    <line x1="360" y1="210" x2="480" y2="270"/>
+    <line x1="360" y1="300" x2="480" y2="150"/>
+    <line x1="360" y1="300" x2="480" y2="270"/>
+
+    <!-- Layer 3 to Output -->
+    <line x1="480" y1="150" x2="570" y2="210"/>
+    <line x1="480" y1="270" x2="570" y2="210"/>
+  </g>
+
+  <!-- Nodes Layer 1 -->
+  <circle cx="240" cy="140" r="14" fill="#06b6d4" stroke="#e0f2fe" stroke-width="2"/>
+  <circle cx="240" cy="210" r="14" fill="#06b6d4" stroke="#e0f2fe" stroke-width="2"/>
+  <circle cx="240" cy="280" r="14" fill="#06b6d4" stroke="#e0f2fe" stroke-width="2"/>
+
+  <!-- Nodes Layer 2 -->
+  <circle cx="360" cy="120" r="18" fill="url(#purpleGrad)" stroke="#f3e8ff" stroke-width="2"/>
+  <circle cx="360" cy="210" r="22" fill="url(#purpleGrad)" stroke="#f3e8ff" stroke-width="2.5" filter="url(#glowAi)"/>
+  <circle cx="360" cy="300" r="18" fill="url(#purpleGrad)" stroke="#f3e8ff" stroke-width="2"/>
+
+  <!-- Nodes Layer 3 -->
+  <circle cx="480" cy="150" r="16" fill="#ec4899" stroke="#fdf2f8" stroke-width="2"/>
+  <circle cx="480" cy="270" r="16" fill="#ec4899" stroke="#fdf2f8" stroke-width="2"/>
+
+  <!-- Output Node -->
+  <circle cx="570" cy="210" r="24" fill="#10b981" stroke="#ecfdf5" stroke-width="3" filter="url(#glowAi)"/>
+  <text x="570" y="216" fill="#ffffff" font-family="system-ui" font-size="16" font-weight="900" text-anchor="middle">✦</text>
+
+  <!-- Tag Pill -->
+  <g transform="translate(315, 365)">
+    <rect width="170" height="40" rx="20" fill="#1e1b4b" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="85" y="25" fill="#e9d5ff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">AI &amp; Smart Apps</text>
+  </g>
+</svg>

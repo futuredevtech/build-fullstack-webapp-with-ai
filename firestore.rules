@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (request.auth.token.admin == true || request.auth.token.email == 'admin@coursehub.dev');
+    }
+
+    // Courses collection
+    match /courses/{courseId} {
+      // Anyone can read published courses; admins can read all (including drafts)
+      allow read: if resource.data.published == true || isAdmin();
+
+      // Only admins can create, update, or delete courses
+      allow create, update, delete: if isAdmin();
+
+      // Lessons subcollection
+      match /lessons/{lessonId} {
+        // Public can read lesson metadata if parent course is published; or if admin
+        allow read: if get(/databases/$(database)/documents/courses/$(courseId)).data.published == true || isAdmin();
+
+        // Only admins can create, update, reorder or delete lessons
+        allow create, update, delete: if isAdmin();
+      }
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Users can only read and update their own profile document
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) &&
+        !request.resource.data.keys().hasAny(['admin', 'role', 'claims']);
+      allow update: if isOwner(userId) &&
+        !request.resource.data.diff(resource.data).affectedKeys().hasAny(['admin', 'role', 'claims']);
+
+      // User Enrollments subcollection
+      match /enrollments/{courseId} {
+        // Learners can only access their own enrollments
+        allow read, write: if isOwner(userId);
+
+        // Lesson Progress subcollection under enrollment
+        match /lessonProgress/{lessonId} {
+          allow read, write: if isOwner(userId);
+        }
+      }
+    }
+
+    // Default deny for all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

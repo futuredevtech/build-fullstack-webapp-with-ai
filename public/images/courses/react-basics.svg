@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="reactBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glowReact" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#reactBg)"/>
+
+  <!-- Subtle Radial Glow -->
+  <circle cx="400" cy="225" r="160" fill="#0284c7" opacity="0.15" filter="url(#glowReact)"/>
+
+  <!-- React Atom Structure -->
+  <g transform="translate(400, 225)">
+    <!-- Central Nucleus -->
+    <circle cx="0" cy="0" r="28" fill="url(#cyanGrad)" filter="url(#glowReact)"/>
+    <circle cx="0" cy="0" r="14" fill="#ffffff"/>
+
+    <!-- Orbital Ring 1 -->
+    <ellipse cx="0" cy="0" rx="190" ry="70" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.85" />
+    <circle cx="160" cy="38" r="8" fill="#e0f2fe"/>
+
+    <!-- Orbital Ring 2 (60 deg) -->
+    <g transform="rotate(60)">
+      <ellipse cx="0" cy="0" rx="190" ry="70" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.85" />
+      <circle cx="-150" cy="-42" r="8" fill="#e0f2fe"/>
+    </g>
+
+    <!-- Orbital Ring 3 (120 deg) -->
+    <g transform="rotate(120)">
+      <ellipse cx="0" cy="0" rx="190" ry="70" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.85" />
+      <circle cx="120" cy="-54" r="8" fill="#e0f2fe"/>
+    </g>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(320, 360)">
+    <rect width="160" height="40" rx="20" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#38bdf8" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">React &amp; Hooks</text>
+  </g>
+</svg>
