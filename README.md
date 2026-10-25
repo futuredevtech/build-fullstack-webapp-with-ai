@@ -4,7 +4,7 @@
 
 [![Watch on YouTube](https://img.shields.io/badge/YouTube-Watch%20Full%20Tutorial-red?style=for-the-badge&logo=youtube)](https://youtu.be/6up0dQM4Vao)
 [![Channel](https://img.shields.io/badge/Channel-Abhimanyu%2048-FF0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@Abhimanyu48)
-[![Future Dev Tech](https://img.shields.io/badge/Agency-Future%20Dev%20Tech-0ea5e9?style=for-the-badge&logo=codewars)](https://instagram.com/futuredevtech48)
+[![Future Dev Tech](https://img.shields.io/badge/Website-Future%20Dev%20Tech-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://instagram.com/futuredevtech48)
 [![Instagram](https://img.shields.io/badge/Instagram-@futuredevtech48-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/futuredevtech48)
 [![Email](https://img.shields.io/badge/Contact-info%40futuredevtech.com-22c55e?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@futuredevtech.com)
 
@@ -27,6 +27,11 @@
 
 [![Build a Full Stack Web App with AI Tutorial](https://img.youtube.com/vi/6up0dQM4Vao/maxresdefault.jpg)](https://youtu.be/6up0dQM4Vao)
 
+<br />
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Website-22c55e?style=for-the-badge&logo=googlechrome&logoColor=white)](https://fullstack-web-app-b57c7.web.app)
+
+🌐 **Live Demo Website:** **[https://fullstack-web-app-b57c7.web.app](https://fullstack-web-app-b57c7.web.app)**  
 👉 **[Click Here to Watch the Complete Tutorial on YouTube (Abhimanyu 48)](https://youtu.be/6up0dQM4Vao)**
 
 *Subscribe to **[Abhimanyu 48](https://youtu.be/6up0dQM4Vao)** on YouTube for more in-depth full-stack web development tutorials, AI-assisted coding walkthroughs, and modern software engineering guides!*
