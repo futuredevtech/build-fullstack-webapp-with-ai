@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # 🎓 CourseHub — Full-Stack Course Web App (Built with AI)
@@ -200,3 +201,6 @@ Looking for a professional development team to build your next big idea? **Futur
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use it for your personal learning, portfolio, or commercial products!
+=======
+# build-fullstack-webapp-with-ai
+>>>>>>> 416bda061426a541be0eb81b17049294fe705008
